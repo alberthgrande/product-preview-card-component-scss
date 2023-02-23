@@ -1,0 +1,14 @@
+@media only screen and (max-width: 37.5rem) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    margin: 10.563rem 1rem 0;
+  }
+  .product {
+    &__image-mobile {
+      height: auto;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}

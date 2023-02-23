@@ -1,0 +1,115 @@
+$margin-bottom: 1.47rem;
+$margin-top: 1.363rem;
+
+body {
+  display: grid;
+  place-content: center;
+
+  /* width root */
+  background-color: var(--primary-cream);
+  font-family: var(--font-montserrat);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  max-width: 37.5rem;
+
+  // with root
+  background-color: var(--neutral-white);
+}
+
+.product {
+  padding: 2rem;
+
+  &__category {
+    font-size: 0.875rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    // with root
+    color: var(--neutral-dark-grayish-blue);
+    font-weight: var(--fw-500);
+  }
+
+  &__title {
+    margin: $margin-top 0 $margin-bottom;
+    font-size: 2rem;
+    line-height: 1;
+
+    // with root
+    font-family: var(--font-fraunces);
+    color: var(--neutral-very-dark-blue);
+  }
+
+  &__text {
+    margin-bottom: 1.7rem;
+
+    // with root
+    font-size: var(--font-size);
+    color: var(--neutral-dark-grayish-blue);
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+    margin-bottom: $margin-bottom;
+    gap: 1rem;
+  }
+
+  &__current-price {
+    font-size: 1.8rem;
+
+    // with root
+    color: var(--primary-dark-cyan);
+    font-family: var(--font-fraunces);
+  }
+
+  &__old-price {
+    text-decoration: line-through;
+
+    // with root
+    color: var(--neutral-dark-grayish-blue);
+    font-size: var(--font-size);
+  }
+
+  &__button {
+    width: 100%;
+    padding: 0.7rem;
+    border-radius: 0.3rem;
+    border: none;
+    cursor: pointer;
+
+    // with root
+    background: var(--primary-dark-cyan);
+    color: var(--neutral-white);
+  }
+
+  // hover
+  &__button:hover {
+    background: hsl(155, 32%, 29%);
+  }
+
+  // active
+  &__button:active {
+    transform: scale(0.98);
+  }
+
+  &__button[data-icon="shopping-cart"]::before {
+    content: url(../images/icon-cart.svg);
+    width: 15px;
+    height: 16px;
+    margin-right: 0.5rem;
+  }
+}
+
+// footer
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  a {
+    color: hsl(228, 45%, 44%);
+  }
+}
